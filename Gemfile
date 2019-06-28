@@ -1,10 +1,4 @@
 source 'https://rubygems.org'
-gemspec name: 'flipper'
-
-Dir['flipper-*.gemspec'].each do |gemspec|
-  plugin = gemspec.scan(/flipper-(.*)\.gemspec/).flatten.first
-  gemspec(name: "flipper-#{plugin}", development_group: plugin)
-end
 
 gem 'pry'
 gem 'rake', '~> 10.4.2'

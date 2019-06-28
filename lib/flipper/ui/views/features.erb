@@ -20,6 +20,17 @@
 <% else %>
   <div class="card">
     <h4 class="card-header">Features</h4>
+
+    <form action="<%= script_name %>/features" method="get">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input name="search" type="text" class="form-control" placeholder="<%= @search %>">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+
     <table class="table">
       <thead>
         <tr class="d-flex">
