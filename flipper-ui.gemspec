@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/flipper/version', __FILE__)
-require File.expand_path('../lib/flipper/metadata', __FILE__)
 
 flipper_ui_files = lambda do |file|
   file =~ %r{(docs|examples|flipper)[\/-]ui}
@@ -19,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.name          = 'flipper-ui'
   gem.require_paths = ['lib']
   gem.version       = Flipper::VERSION
-  gem.metadata      = Flipper::METADATA
 
   gem.add_dependency 'rack', '>= 1.4', '< 3'
   gem.add_dependency 'rack-protection', '>= 1.5.3', '< 2.1.0'
